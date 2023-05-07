@@ -2,9 +2,8 @@
 ## 创建CA证书
 1.创建一个秘钥，这个便是CA证书的根本，之后所有的东西都来自这个秘钥  
 <code>openssl genrsa -out myCA.key 2048</code>  
-2.通过秘钥加密机构信息形成公钥  
-<-- Common Name填localhost  -->  
-openssl req -new -x509 -key myCA.key -out myCA.cer -days 36500  
+2.通过秘钥加密机构信息形成公钥( Common Name填localhost )  
+<code>openssl req -new -x509 -key myCA.key -out myCA.cer -days 36500</code>  
 
 ## 创建服务器证书
 1.创建服务器的秘钥  
